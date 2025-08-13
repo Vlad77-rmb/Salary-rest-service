@@ -1,0 +1,12 @@
+# описание контейнера: порт, монтинг,переменные окружения
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data  # Для сохранения БД
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
+      - DATABASE_URL=sqlite:////app/data/salary.db
