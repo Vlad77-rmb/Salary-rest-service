@@ -2,7 +2,7 @@ from salary_service.database import Base, engine, SessionLocal
 from sqlalchemy.orm import Session
 from datetime import datetime
 from salary_service.database import get_db
-from fastapi.security import OAuth2PasswordRequestForm  # Добавьте эту строку
+from fastapi.security import OAuth2PasswordRequestForm  
 from fastapi.middleware.cors import CORSMiddleware
 # импорт основных компонентов приложения
 from fastapi import FastAPI, Depends, HTTPException, status
